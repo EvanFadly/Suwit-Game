@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suwit Game</title>
+    <style>
+        body{
+            background-color: wheat;
+        }
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 75px;
+            color: brown;
+            font-weight: bold;
+            text-align: center;
+            margin: 5px auto;
+            text-shadow: 1.5px 1.5px 0 #333, 0px 1.5px 0 #333, -1.5px -1.5px 0 #333, -1.5px -1.5px 0 #333, -1.5px 1.5px 0 #333, 1.5px -1.5px 0 #333, 0.7778174593px 0.7778174593px 0 #aaaaaa, 1.5556349186px 1.5556349186px 0 #aaaaaa, 2.3334523779px 2.3334523779px 0 #aaaaaa, 3.1112698372px 3.1112698372px 0 #aaaaaa, 3.8890872965px 3.8890872965px 0 #aaaaaa, 4.6669047558px 4.6669047558px 0 #aaaaaa, 5.4447222151px 5.4447222151px 0 #aaaaaa, 6.2225396744px 6.2225396744px 0 #aaaaaa, 7.0003571337px 7.0003571337px 0 #aaaaaa, 7.7781745931px 7.7781745931px 0 #aaaaaa;
+        }
+        .container {
+            width: 600px;
+            margin: auto;
+            padding: 20px;
+            position: relative;
+        }
+
+        .area-komputer {
+            width: 560px;
+            height: 250px;
+            margin: 5px auto;
+            background-color: red;
+            /* background: linear-gradient(to bottom, rgba(179, 220, 237, 1) 0%, rgba(41, 184, 229, 1) 100%); */
+            position: relative;
+            padding-top: 40px;
+            box-sizing: border-box;
+            border-radius: 40px 40px 0 0;
+        }
+
+        .area-player {
+            width: 560px;
+            height: 250px;
+            margin: 5px auto;
+            background-color: blue;
+            /* background: linear-gradient(to bottom, rgba(210, 255, 82, 1) 0%, rgba(145, 232, 66, 1) 100%); */
+            position: relative;
+            border-radius: 0 0 40px 40px;
+        }
+
+        .info {
+            width: 150px;
+            height: 60px;
+            border: 5px solid black; ;
+            position: absolute;
+            left: 50%;
+            margin-left: -75px;
+            top: 50%;
+            margin-top: -30px;
+            background-color: white;
+            border-radius: 30px;
+            z-index: 1;
+            text-align: center;
+            line-height: 60px;
+            color: green;
+            font-size: 35px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+        }
+
+        ul {
+            padding-top: 80px;
+            padding-left: 25px;
+        }
+
+        li {
+            display: inline-block;
+            margin: 0 18px;
+        }
+
+        img {
+            width: 130px;
+            height: 130px;
+            display: block;
+            margin: auto;
+            border-radius: 50%;
+            border: 3px solid black;
+        }
+
+        .batu,
+        .kertas,
+        .gunting{
+            transition: .3s;
+            position: relative;
+            top: 0;
+            cursor: pointer;
+        }
+
+        .batu:hover,
+        .kertas:hover,
+        .gunting:hover,
+        .active {
+            box-shadow: 0 0 10px 5px whitesmoke;
+        }
+
+        .batu:active,
+        .kertas:active,
+        .gunting:active {
+            top: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Suwit Game</h1>
+
+    <div class="container">
+        <div class="area-komputer">
+            <img src="gunting.jpg" class="img-komputer">
+        </div>
+        <div class="info"></div>
+        <div class="area-player">
+            <ul>
+                <li>
+                    <img src="batu.jpg" class="batu">
+                </li>
+                <li>
+                    <img src="kertas.jpg" class="kertas">
+                </li>
+                <li>
+                    <img src="gunting.jpg" class="gunting">
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="gameSuwit.js"></script>
+</body>
+
+</html>
